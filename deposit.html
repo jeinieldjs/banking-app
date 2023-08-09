@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Group 10 Banking App</title>
     <link href="dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="deposit.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,8 +37,18 @@
         <a href="index.html" id="log-out">Log out</a>
       </div>
 
-      <div id="admin-dash"></div>
+      <div class="deposit-content">
+        <h1>Deposit Page</h1>
+        <label for="clients">Choose a user:</label>
+
+        <select name="clients" id="clients-dropdown"></select>
+        <div class="client-info">
+          <div>Balance: <span id="client-balance">0</span></div>
+          <input type="number" name="deposit-input" id="deposit-input" />
+          <input type="button" id="deposit-button" value="Deposit" />
+        </div>
+      </div>
     </section>
-    <script src="dashboard.js"></script>
+    <script src="deposit.js"></script>
   </body>
 </html>
