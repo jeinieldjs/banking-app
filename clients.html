@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Group 10 Banking App</title>
+  <link href="dashboard.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://kit.fontawesome.com/b4db9c598c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section id="home">
+    <div id="sideNav" class="sidenav">
+        <div id="logoText">
+          <img src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="logo"/>
+          <h1 id="bank name">PigPocket</h1>
+        </div>
+        <a href="dashboard.html" id="home">Home</a>
+        <a href="clients.html" id="clients">Clients</a>
+        <a href="#" id="deposit">Deposit</a>
+        <a href="#" id="withdraw">Withdraw</a>
+        <a href="#" id="transfer">Transfer</a>
+        <a href="index.html" id="log-out">Log out</a>
+
+    </div>
+
+    <div id="table-container">
+        <h1>LIST OF CLIENTS</h1>
+    </div>
+    <div id="create-client">
+        <div id="client-form">
+            <div class="input-client">
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" required><br>
+            </div>
+
+        <div class="input-client">
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" required><br>
+        </div>
+
+        <div class="input-client">
+            <label for="balance-input">Balance:</label>
+            <input type="number" id="balance-input" required min="0"><br>
+        </div>
+        <div id="btn-container">
+            <button type="button" id="add-client-btn">Add Client</button>
+        </div>
+        </div>
+
+    </div>
+    </section>
+    <script src="clients.js"></script>
+</body>
+
+</html>

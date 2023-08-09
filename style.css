@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /*background-color:  #FDFFFF    ;*/
+    background: rgb(253,255,255);
+    background: linear-gradient(180deg, rgba(253,255,255,1) 55%, rgba(179,222,129,0.5663515406162465) 97%);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header{
+    background-color: #b3de81;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+#header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#logo-container{
+    height: 100px;
+    padding-right: 20px;
+}
+
+#logo-container img{
+    height: 90%;
+}
+#log-details {
+    margin: auto;
+    margin-top: 200px;
+    width: 400px;
+    height: 150px;
+    background-color: #b3de81;
+    border-radius: 25px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.log-input {
+    width: 100%;
+}
+.log-input input{
+    text-align: left;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px;
+    height: 35px;
+    width: 100%;
+    line-height: 2rem;
+    margin-bottom: 5px;
+    border: none;
+    background-color:#FDFFFF;
+}
+
+#log-button {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-family:'Merriweather Sans', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:#FDFFFF;
+    color: #265C00;
+    border: none;
+}
+
+#log-button:hover{
+    background-color: #68a225ac;
+    color: #FDFFFF;
+}
+
