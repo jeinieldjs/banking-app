@@ -1,22 +1,4 @@
-class Client {
-  constructor(name, email, userId, balance) {
-    this.name = name;
-    this.email = email;
-    this.userId = userId;
-    this.balance = balance;
-  }
-
-  displayInfo() {
-    return `${this.name} - ${this.email} (ID: ${this.userId}) - Balance: $${this.balance}`;
-  }
-}
-
-let clients = JSON.parse(localStorage.getItem("clients")) || [
-  new Client("Anna Medina", "annamedina@gmail.com", 102893, 5000),
-  new Client("Bruno Cruz", "brunocruz@yahooo.com", 182203, 250000),
-  new Client("Chay Pena", "chaypena27@gmail.com", 960405, 300),
-  new Client("Dexter Lim", "dexlim@yahoo.com", 290917, 39000),
-];
+let clients = JSON.parse(localStorage.getItem("clients"));
 
 function list_clients() {
   const tableContainer = document.getElementById("table-container");
@@ -202,3 +184,5 @@ function deleteClient(rowIndex) {
 
   updateTable();
 }
+
+export { clients };
