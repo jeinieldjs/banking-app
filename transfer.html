@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Group 10 Banking App</title>
     <link href="dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="transfer.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,10 +13,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
     <script
       src="https://kit.fontawesome.com/b4db9c598c.js"
       crossorigin="anonymous"
@@ -40,31 +37,30 @@
         <a href="index.html" id="log-out">Log out</a>
       </div>
 
-      <div id="table-container">
-        <h1>LIST OF CLIENTS</h1>
-      </div>
-      <div id="create-client">
-        <div id="client-form">
-          <div class="input-client">
-            <label for="name-input">Name:</label>
-            <input type="text" id="name-input" required /><br />
-          </div>
+      <div class="transfer-content">
+        <h1>Transfer Page</h1>
 
-          <div class="input-client">
-            <label for="email-input">Email:</label>
-            <input type="email" id="email-input" required /><br />
-          </div>
-
-          <div class="input-client">
-            <label for="balance-input">Balance:</label>
-            <input type="number" id="balance-input" required min="0" /><br />
-          </div>
-          <div id="btn-container">
-            <button type="button" id="add-client-btn">Add Client</button>
-          </div>
+        <label for="sender">From: </label>
+        <select name="sender" id="sender-dropdown"></select>
+        <div class="sender-info">
+          <div>Balance: <span id="sender-balance">0</span></div>
         </div>
+
+        <label for="receiver">To: </label>
+        <select name="receiver" id="receiver-dropdown"></select>
+        <div class="receiver-info">
+          <div>Balance: <span id="receiver-balance">0</span></div>
+        </div>
+
+        <input
+          type="number"
+          name="transfer-input"
+          id="transfer-input"
+          placeholder="Enter amount"
+        />
+        <input type="button" id="transfer-button" value="Transfer" />
       </div>
     </section>
-    <script src="clients.js" type="module"></script>
+    <script src="transfer.js" type="module"></script>
   </body>
 </html>

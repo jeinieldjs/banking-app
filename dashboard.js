@@ -1,27 +1,52 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let adminDisplay = document.getElementById('admin-dash');
-    let loggedInUser = localStorage.getItem('loggedInUser');
-    
-    if (loggedInUser) {
-        let greet = document.createElement('h1');
-        greet.innerHTML = `Welcome, <span id="usernameSpan">${loggedInUser}</span>!`;
-        adminDisplay.appendChild(greet);
+class Client {
+  constructor(name, email, userId, balance) {
+    this.name = name;
+    this.email = email;
+    this.userId = userId;
+    this.balance = balance;
+  }
 
-        let usernameSpan = document.getElementById('usernameSpan');
-        usernameSpan.style.color = '#68A225';
+  displayInfo() {
+    return `${this.name} - ${this.email} (ID: ${this.userId}) - Balance: $${this.balance}`;
+  }
+}
 
-        let dateContainer = document.createElement('div');
-        dateContainer.setAttribute('id', 'date-container');
-        adminDisplay.appendChild(dateContainer);
+let initialClients = [
+  new Client("Anna Medina", "annamedina@gmail.com", 102893, 5000),
+  new Client("Bruno Cruz", "brunocruz@yahooo.com", 182203, 250000),
+  new Client("Chay Pena", "chaypena27@gmail.com", 960405, 300),
+  new Client("Dexter Lim", "dexlim@yahoo.com", 290917, 39000),
+];
 
-        function updateDateTime() {
-            let currentTime = new Date();
-            dateContainer.textContent = `${currentTime.toDateString()} | ${currentTime.toLocaleTimeString()}`;
-        }
+let clients = localStorage.getItem("clients")
+  ? JSON.parse(localStorage.getItem("clients"))
+  : initialClients;
 
-        
-        updateDateTime(); 
-        setInterval(updateDateTime, 1000); 
+localStorage.setItem("clients", JSON.stringify(clients));
+
+document.addEventListener("DOMContentLoaded", function () {
+  let adminDisplay = document.getElementById("admin-dash");
+  let loggedInUser = localStorage.getItem("loggedInUser");
+
+  if (loggedInUser) {
+    let greet = document.createElement("h1");
+    greet.innerHTML = `Welcome, <span id="usernameSpan">${loggedInUser}</span>!`;
+    adminDisplay.appendChild(greet);
+
+    let usernameSpan = document.getElementById("usernameSpan");
+    usernameSpan.style.color = "#68A225";
+
+    let dateContainer = document.createElement("div");
+    dateContainer.setAttribute("id", "date-container");
+    adminDisplay.appendChild(dateContainer);
+
+    function updateDateTime() {
+      let currentTime = new Date();
+      dateContainer.textContent = `${currentTime.toDateString()} | ${currentTime.toLocaleTimeString()}`;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
 
     let todoContainer = document.createElement("div");
     todoContainer.setAttribute("id", "todo-container");
@@ -29,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let taskInput = document.createElement("input");
     taskInput.setAttribute("type", "text");
-    taskInput.setAttribute("id", "task-input")
+    taskInput.setAttribute("id", "task-input");
     taskInput.setAttribute("placeholder", "TODAY'S TASKS");
     todoContainer.appendChild(taskInput);
 
@@ -87,5 +112,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loadToDoItems();
-    }
+  }
 });
