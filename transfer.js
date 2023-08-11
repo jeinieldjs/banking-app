@@ -9,36 +9,6 @@ let transferButton = document.querySelector("#transfer-button");
 
 let clients = JSON.parse(localStorage.getItem("clients"));
 
-// clients.forEach((client, index) => {
-//   let senderOption = document.createElement("option");
-//   senderOption.value = client.name;
-//   senderOption.innerText = client.name;
-
-//   if (index === 0) {
-//     senderOption.setAttribute("selected", "selected");
-//   }
-
-//   senderDropdown.appendChild(senderOption);
-// });
-
-// senderDropdown.onchange = () => {
-//   let filteredClients = clients.filter(
-//     (client) => client.name !== senderDropdown.value
-//   );
-
-//   filteredClients.forEach((client, index) => {
-//     let receiverOption = document.createElement("option");
-//     receiverOption.value = client.name;
-//     receiverOption.innerText = client.name;
-
-//     if (index === 0) {
-//       receiverOption.setAttribute("selected", "selected");
-//     }
-
-//     receiverDropdown.appendChild(receiverOption);
-//   });
-// };
-
 function updateSenderValues() {
   clients.forEach((client, index) => {
     let senderOption = document.createElement("option");
@@ -83,6 +53,24 @@ function updateBalances() {
 
   let receiver = findUser(receiverDropdown.value);
   receiverBalance.innerText = receiver.balance;
+
+  transferInput.value = "";
+  transferInput.focus();
+}
+
+function transfer() {
+  let sender = findUser(senderDropdown.value);
+  let receiver = findUser(receiverDropdown.value);
+  let transferAmount = parseInt(transferInput.value);
+
+  sender.balance = parseInt(sender.balance) - parseInt(transferAmount);
+  receiver.balance = parseInt(receiver.balance) + parseInt(transferAmount);
+
+  localStorage.setItem("clients", JSON.stringify(clients));
+
+  alert("balance was transferred successfully");
+
+  updateBalances();
 }
 
 senderDropdown.onchange = () => {
@@ -98,4 +86,8 @@ window.onload = () => {
   updateSenderValues();
   updateReceiverValues();
   updateBalances();
+};
+
+transferButton.onclick = () => {
+  transfer();
 };
