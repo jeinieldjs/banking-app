@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Group 10 Banking App</title>
     <link href="dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="withdraw.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +29,7 @@
           />
           <h1 id="bank name">PigPocket</h1>
         </div>
-        <a href="#home" id="home">Home</a>
+        <a href="dashboard.html" id="home">Home</a>
         <a href="clients.html" id="clients">Clients</a>
         <a href="deposit.html" id="deposit">Deposit</a>
         <a href="withdraw.html" id="withdraw">Withdraw</a>
@@ -36,8 +37,23 @@
         <a href="index.html" id="log-out">Log out</a>
       </div>
 
-      <div id="admin-dash"></div>
+      <div class="withdraw-content">
+        <h1>Withdraw Page</h1>
+        <label for="clients">Choose a user:</label>
+
+        <select name="clients" id="clients-dropdown"></select>
+        <div class="client-info">
+          <div>Balance: <span id="client-balance">0</span></div>
+          <input
+            type="number"
+            name="withdraw-input"
+            id="withdraw-input"
+            placeholder="Enter amount"
+          />
+          <input type="button" id="withdraw-button" value="Withdraw" />
+        </div>
+      </div>
     </section>
-    <script src="dashboard.js"></script>
+    <script src="withdraw.js" type="module"></script>
   </body>
 </html>

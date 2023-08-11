@@ -2,8 +2,8 @@ let clients = JSON.parse(localStorage.getItem("clients"));
 
 let clientsDropdown = document.querySelector("#clients-dropdown");
 let clientBalance = document.querySelector("#client-balance");
-let depositButton = document.querySelector("#deposit-button");
-let depositInput = document.querySelector("#deposit-input");
+let withdrawButton = document.querySelector("#withdraw-button");
+let withdrawInput = document.querySelector("#withdraw-input");
 
 clients.forEach((client, index) => {
   let clientOption = document.createElement("option");
@@ -21,12 +21,12 @@ clientsDropdown.onchange = () => {
   updateValues();
 };
 
-let deposit = () => {
+let withdraw = () => {
   let client = findUser(clientsDropdown.value);
-  client.balance = parseInt(client.balance) + parseInt(depositInput.value);
+  client.balance = parseInt(client.balance) - parseInt(withdrawInput.value);
   localStorage.setItem("clients", JSON.stringify(clients));
   updateValues();
-  alert("Balance added successfully!");
+  alert("Balance withdrawn successfully!");
 };
 
 let findUser = (name) => {
@@ -36,9 +36,9 @@ let findUser = (name) => {
 let updateValues = () => {
   let selectedClient = findUser(clientsDropdown.value);
   clientBalance.innerText = selectedClient?.balance || 0;
-  depositInput.value = "";
-  depositInput.focus();
+  withdrawInput.value = "";
+  withdrawInput.focus();
 };
 
-depositButton.addEventListener("click", deposit);
+withdrawButton.addEventListener("click", withdraw);
 updateValues();
