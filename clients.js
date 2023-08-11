@@ -1,3 +1,16 @@
+class Client {
+  constructor(name, email, userId, balance) {
+    this.name = name;
+    this.email = email;
+    this.userId = userId;
+    this.balance = balance;
+  }
+
+  displayInfo() {
+    return `${this.name} - ${this.email} (ID: ${this.userId}) - Balance: $${this.balance}`;
+  }
+}
+
 let clients = JSON.parse(localStorage.getItem("clients"));
 
 function list_clients() {
