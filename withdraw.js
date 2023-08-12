@@ -23,7 +23,20 @@ clientsDropdown.onchange = () => {
 
 let withdraw = () => {
   let client = findUser(clientsDropdown.value);
-  client.balance = parseInt(client.balance) - parseInt(withdrawInput.value);
+  let withdrawAmount = parseInt(withdrawInput.value);
+
+  if (withdrawAmount > client.balance){
+    alert("Client has insufficient funds for this transaction.");
+    return;
+  }
+
+  if (withdrawAmount <= 0){
+    alert("Amount to be withdrawn is invalid.");
+    return;
+  }
+
+  
+  client.balance = parseInt(client.balance) - withdrawAmount;
   localStorage.setItem("clients", JSON.stringify(clients));
   updateValues();
   alert("Balance withdrawn successfully!");
