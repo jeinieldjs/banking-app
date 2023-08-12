@@ -2,28 +2,29 @@ let logOutButton = document.querySelector("#log-out");
 
 let isLoggedIn = () => {
   let loggedUser = localStorage.getItem("loggedInUser");
+  let homepage = window.location.origin;
+  let path = "";
 
-  let loginpages = [
-    "/",
-    "/index.html",
-    "/banking-app/",
-    "/banking-app/index.html",
-    "/banking-app-js/",
-    "/banking-app-js/index.html",
-  ];
+  if (
+    homepage === "https://mecarte-ai.github.io" ||
+    homepage === "https://jeinieldjs.github.io"
+  ) {
+    path += "/banking-app";
+  }
 
-  let currentPage = window.location.pathname;
-
-  // user not logged in
   if (!loggedUser) {
-    if (!loginpages.includes(currentPage)) {
-      window.location.href = "/index.html";
+    if (
+      window.location.pathname !== path + "/" &&
+      window.location.pathname !== path + "/index.html"
+    ) {
+      window.location.pathname = path + "/";
     }
-
-    // user logged in
   } else {
-    if (loginpages.includes(currentPage)) {
-      window.location.href = "/dashboard.html";
+    if (
+      window.location.pathname === path + "/" ||
+      window.location.pathname === path + "/index.html"
+    ) {
+      window.location.pathname = path + "/dashboard.html";
     }
   }
 };
