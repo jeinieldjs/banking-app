@@ -124,7 +124,7 @@ function create_user() {
   }
 
   const existingClient = clients.find(
-    (client) => client.name === nameInput || client.email === emailInput
+    (client) => client.name.toLowerCase() === nameInput.toLowerCase() && client.email === emailInput
   );
   if (existingClient) {
     alert("A client with the same name or email already exists.");
