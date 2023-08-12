@@ -63,6 +63,11 @@ function transfer() {
   let receiver = findUser(receiverDropdown.value);
   let transferAmount = parseFloat(transferInput.value);
 
+  if (transferInput.value.trim() === ""){
+    alert("Please enter an amount to transfer.");
+    return;
+  }
+
   if (transferAmount <= 0){
     alert("Transfer amount is invalid");
     return;
