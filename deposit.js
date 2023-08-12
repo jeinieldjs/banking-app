@@ -43,7 +43,7 @@ let findUser = (name) => {
 
 let updateValues = () => {
   let selectedClient = findUser(clientsDropdown.value);
-  clientBalance.innerText = selectedClient?.balance || 0;
+  clientBalance.innerText = selectedClient?.balance.toFixed(2) || 0;
   depositInput.value = "";
   depositInput.focus();
 };

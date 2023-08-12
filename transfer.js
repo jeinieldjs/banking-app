@@ -49,10 +49,10 @@ function findUser(user) {
 
 function updateBalances() {
   let sender = findUser(senderDropdown.value);
-  senderBalance.innerText = sender.balance;
+  senderBalance.innerText = sender.balance.toFixed(2);
 
   let receiver = findUser(receiverDropdown.value);
-  receiverBalance.innerText = receiver.balance;
+  receiverBalance.innerText = receiver.balance.toFixed(2);
 
   transferInput.value = "";
   transferInput.focus();
