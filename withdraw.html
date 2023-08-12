@@ -38,19 +38,22 @@
       </div>
 
       <div class="withdraw-content">
-        <h1>Withdraw Page</h1>
+        <h1 class="transaction-headings">Withdraw Page</h1>
+        <div class="transaction-wrapper">
         <label for="clients">Choose a user:</label>
 
-        <select name="clients" id="clients-dropdown"></select>
+        <select class="clients-selection" name="clients" id="clients-dropdown"></select>
         <div class="client-info">
-          <div>Balance: <span id="client-balance">0</span></div>
+          <div class="balance-display">Balance: <span class="balance-value" id="client-balance">0</span></div>
           <input
+            class="transaction-fields"
             type="number"
             name="withdraw-input"
             id="withdraw-input"
             placeholder="Enter amount"
-          />
-          <input type="button" id="withdraw-button" value="Withdraw" />
+          /><br>
+          <input class= "transaction-btn" type="button" id="withdraw-button" value="Withdraw" />
+        </div>
         </div>
       </div>
     </section>

@@ -38,27 +38,37 @@
       </div>
 
       <div class="transfer-content">
-        <h1>Transfer Page</h1>
+        <h1 class="transaction-headings">Transfer Page</h1>
+        <div class="transaction-wrapper">
+          <div class="participants">
+          <div class="sender-details">
+            <label for="sender"><b>FROM:</b></label>
+            <select class="clients-selection" ="sender" id="sender-dropdown"></select>
+            <div class="sender-info">
+              <div class="balance-display">Balance: <span class="balance-value"id="sender-balance">0</span></div>
+            </div>
+          </div>
+        
+          <div class="receipient-details">
+            <label for="receiver"><b>TO:</b></label>
+            <select class="clients-selection" name="receiver" id="receiver-dropdown"></select>
+            <div class="receiver-info">
+              <div class="balance-display">Balance: <span class="balance-value" id="receiver-balance">0</span></div>
+            </div>
+          </div>
+          </div>
 
-        <label for="sender">From: </label>
-        <select name="sender" id="sender-dropdown"></select>
-        <div class="sender-info">
-          <div>Balance: <span id="sender-balance">0</span></div>
+          <input
+            class="transaction-fields"
+            type="number"
+            name="transfer-input"
+            id="transfer-input"
+            placeholder="Enter amount"
+          />
+          <br>
+          <input class= "transaction-btn" type="button" id="transfer-button" value="Transfer" />
         </div>
-
-        <label for="receiver">To: </label>
-        <select name="receiver" id="receiver-dropdown"></select>
-        <div class="receiver-info">
-          <div>Balance: <span id="receiver-balance">0</span></div>
-        </div>
-
-        <input
-          type="number"
-          name="transfer-input"
-          id="transfer-input"
-          placeholder="Enter amount"
-        />
-        <input type="button" id="transfer-button" value="Transfer" />
+      </div>
       </div>
     </section>
     <script src="transfer.js" type="module"></script>

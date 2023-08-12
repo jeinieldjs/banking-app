@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (loggedInUser) {
     let greet = document.createElement("h1");
-    greet.innerHTML = `Welcome, <span id="usernameSpan">${loggedInUser}</span>!`;
+    greet.innerHTML = `WELCOME, <span id="usernameSpan">${loggedInUser}</span>!`;
     adminDisplay.appendChild(greet);
 
     let usernameSpan = document.getElementById("usernameSpan");

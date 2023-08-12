@@ -38,19 +38,23 @@
       </div>
 
       <div class="deposit-content">
-        <h1>Deposit Page</h1>
-        <label for="clients">Choose a user:</label>
+        <h1 class="transaction-headings">Deposit Page</h1>
+        <div class="transaction-wrapper">
+          <label for="clients">Choose a user:</label>
 
-        <select name="clients" id="clients-dropdown"></select>
-        <div class="client-info">
-          <div>Balance: <span id="client-balance">0</span></div>
-          <input
-            type="number"
-            name="deposit-input"
-            id="deposit-input"
-            placeholder="Enter amount"
-          />
-          <input type="button" id="deposit-button" value="Deposit" />
+          <select class="clients-selection" name="clients" id="clients-dropdown"></select>
+          <div class="client-info">
+            <div class="balance-display">Balance: <span class="balance-value" id="client-balance">0</span></div>
+              <input
+                class="transaction-fields"
+                type="number"
+                name="deposit-input"
+                id="deposit-input"
+                placeholder="Enter amount"
+              />
+              <br>
+            <input class= "transaction-btn" type="button" id="deposit-button" value="Deposit" />
+          </div>
         </div>
       </div>
     </section>

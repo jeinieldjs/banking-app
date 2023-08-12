@@ -6,7 +6,11 @@
 }
 
 body {
-    background-color:  #FDFFFF    ;
+    /*background-color:  #FDFFFF    ;*/
+    background-image: url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
@@ -50,7 +54,7 @@ body {
 }
   
 .sidenav a:hover:not(.active) {
-    background-color: #265c00 ;
+    background-color: #787975 ;
     color: #FDFFFF;
 }
   
@@ -73,6 +77,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 5px;
+    margin-top: 5px;
 }
 
 #todo-container{
@@ -111,15 +116,12 @@ body {
     margin-left: 200px;
 }
 
-#table-container h1{
-    font-size: 3rem;
-    padding-bottom: 50px;
-}
 
 #client-info{
     border-collapse: collapse;
     width: 600px;
     margin-bottom: 20px;
+    background-color: #fdffffaa;
 }
 
 #client-info th,#client-info td {
@@ -191,3 +193,81 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.transaction-btn {
+    font-size: 1rem;
+    padding: 3px;
+    text-transform: uppercase;
+    background-color:#b3de81;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+}
+.transaction-btn:hover {
+    background-color:#265C00;
+    color:white;
+    border: none;
+}
+
+
+.transaction-fields {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 3px;
+    background-color: transparent;
+}
+
+.transaction-fields::placeholder{
+    color: #265c00;
+   
+}
+.transaction-headings {
+    font-size: 3rem;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.transaction-wrapper{
+    background-color: #fcfcfcae;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    border: solid 2px #b3de81;
+    font-size: 1rem;
+}
+
+.balance-display {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.balance-value {
+    font-weight: 700;
+    color:#265C00;
+}
+
+.clients-selection {
+    font-size: 1rem;
+    background-color: transparent;
+    color:#306c05;
+    font-weight: 600;
+    padding: 3px;
+    width: 130px;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.participants {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.sender-details, .receipient-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
