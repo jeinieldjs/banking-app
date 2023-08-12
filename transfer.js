@@ -61,7 +61,7 @@ function updateBalances() {
 function transfer() {
   let sender = findUser(senderDropdown.value);
   let receiver = findUser(receiverDropdown.value);
-  let transferAmount = parseInt(transferInput.value);
+  let transferAmount = parseFloat(transferInput.value);
 
   if (transferAmount <= 0){
     alert("Transfer amount is invalid");
@@ -73,8 +73,8 @@ function transfer() {
     return;
   }
 
-  sender.balance = parseInt(sender.balance) - parseInt(transferAmount);
-  receiver.balance = parseInt(receiver.balance) + parseInt(transferAmount);
+  sender.balance = parseFloat(sender.balance) - parseFloat(transferAmount);
+  receiver.balance = parseFloat(receiver.balance) + parseFloat(transferAmount);
 
   localStorage.setItem("clients", JSON.stringify(clients));
 

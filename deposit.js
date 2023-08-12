@@ -23,7 +23,15 @@ clientsDropdown.onchange = () => {
 
 let deposit = () => {
   let client = findUser(clientsDropdown.value);
-  client.balance = parseInt(client.balance) + parseInt(depositInput.value);
+  let depositAmount = parseFloat(depositInput.value);
+
+  if (depositAmount <= 0){
+    alert("Amount to be deposited is invalid.");
+    return;
+  }
+
+
+  client.balance = parseFloat(client.balance) + depositAmount;
   localStorage.setItem("clients", JSON.stringify(clients));
   updateValues();
   alert("Balance added successfully!");
