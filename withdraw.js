@@ -25,6 +25,11 @@ let withdraw = () => {
   let client = findUser(clientsDropdown.value);
   let withdrawAmount = parseFloat(withdrawInput.value);
 
+  if (withdrawInput.value.trim() === ""){
+    alert("Please enter an amount to withdraw.");
+    return;
+  }
+
   if (withdrawAmount > client.balance){
     alert("Client has insufficient funds for this transaction.");
     return;

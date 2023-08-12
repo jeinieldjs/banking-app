@@ -25,7 +25,12 @@ let deposit = () => {
   let client = findUser(clientsDropdown.value);
   let depositAmount = parseFloat(depositInput.value);
 
-  if (depositAmount <= 0){
+  if (depositInput.value.trim() === ""){
+    alert ("Please enter an amount to deposit");
+    return;
+  }
+
+  if (depositAmount <= 0 || isNaN(depositAmount)){
     alert("Amount to be deposited is invalid.");
     return;
   }
