@@ -41,7 +41,7 @@ function list_clients() {
     nameCell.textContent = client.name;
     emailCell.textContent = client.email;
     userIdCell.textContent = client.userId;
-    balanceCell.textContent = client.balance;
+    balanceCell.textContent = client.balance.toFixed(2);
 
     const deleteIcon = document.createElement("i");
     deleteIcon.className = "fas fa-trash-alt";
@@ -125,7 +125,7 @@ function create_user() {
 
   const existingClient = clients.find(
     (client) => client.name.toLowerCase() === nameInput.toLowerCase() && client.email === emailInput
-  );
+  );//pwede mag-add ng same name, as long as magkaiba ng eadd. in cassse common yung name ni client. if same name and same email, di maaadd
   if (existingClient) {
     alert("A client with the same name or email already exists.");
     return;
@@ -162,7 +162,7 @@ function updateTable() {
     nameCell.textContent = client.name;
     emailCell.textContent = client.email;
     userIdCell.textContent = client.userId;
-    balanceCell.textContent = client.balance;
+    balanceCell.textContent = client.balance.toFixed(2);
 
     const deleteIcon = document.createElement("i");
     deleteIcon.className = "fas fa-trash-alt";
