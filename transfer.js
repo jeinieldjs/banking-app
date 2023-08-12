@@ -63,12 +63,22 @@ function transfer() {
   let receiver = findUser(receiverDropdown.value);
   let transferAmount = parseInt(transferInput.value);
 
+  if (transferAmount <= 0){
+    alert("Transfer amount is invalid");
+    return;
+  }
+
+  if (sender.balance < transferAmount){
+    alert("Sender's balance is insufficient for this transfer");
+    return;
+  }
+
   sender.balance = parseInt(sender.balance) - parseInt(transferAmount);
   receiver.balance = parseInt(receiver.balance) + parseInt(transferAmount);
 
   localStorage.setItem("clients", JSON.stringify(clients));
 
-  alert("balance was transferred successfully");
+  alert("Balance was transferred successfully");
 
   updateBalances();
 }
