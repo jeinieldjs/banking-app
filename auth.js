@@ -9,8 +9,12 @@ let isLoggedIn = () => {
     window.location.href = "index.html";
   }
 
-  // if logged in and admin go to index.html
-  if (loggedUser && window.location.href === homepage + "/index.html") {
+  // if logged in and admin go to index.html or homepage
+  if (
+    loggedUser &&
+    (window.location.href === homepage + "/index.html" ||
+      window.location.href === homepage + "/")
+  ) {
     window.location.href = "dashboard.html";
   }
 };
