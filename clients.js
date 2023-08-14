@@ -124,8 +124,8 @@ function create_user() {
   }
 
   const existingClient = clients.find(
-    (client) => client.name.toLowerCase() === nameInput.toLowerCase() && client.email === emailInput
-  );//pwede mag-add ng same name, as long as magkaiba ng eadd. in cassse common yung name ni client. if same name and same email, di maaadd
+    (client) => client.name.toLowerCase() === nameInput.toLowerCase() || client.email === emailInput);
+  
   if (existingClient) {
     alert("A client with the same name or email already exists.");
     return;
