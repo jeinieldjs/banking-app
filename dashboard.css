@@ -121,7 +121,7 @@ body {
     border-collapse: collapse;
     width: 600px;
     margin-bottom: 20px;
-    background-color: #fdffffaa;
+    background-color: #fdffffe0;
 }
 
 #client-info th,#client-info td {
@@ -152,7 +152,7 @@ body {
 
 #client-form{
     width: 350px;
-    background-color: #b3de81;
+    background-color: #b3de81c6;
     padding: 10px;
     border-radius: 10px;
 }
@@ -164,6 +164,7 @@ body {
     height: 1.5rem;
     text-align: center;
     font-size: 1rem;
+    margin-bottom: 3px;
 }
 
 #client-form label{
