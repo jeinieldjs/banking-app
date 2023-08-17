@@ -86,12 +86,18 @@ function assignUserId() {
   return Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
 }
 
+function formatName(name) {
+  return name.toLowerCase().replace(/(?:^|\s)\S/g, (char) => char.toUpperCase());
+}
+
 function create_user() {
   const nameInput = document.getElementById("name-input").value;
   const emailInput = document.getElementById("email-input").value;
   const balanceInput = parseFloat(
     document.getElementById("balance-input").value
   );
+
+  const capitalizedName = formatName(nameInput);
 
   let hasErrors = false;
   let errorMessages = [];
@@ -124,7 +130,7 @@ function create_user() {
   }
 
   const existingClient = clients.find(
-    (client) => client.name.toLowerCase() === nameInput.toLowerCase() || client.email === emailInput);
+    (client) => client.name.toLowerCase() === capitalizedName.toLowerCase() || client.email === emailInput);
   
   if (existingClient) {
     alert("A client with the same name or email already exists.");
@@ -132,8 +138,9 @@ function create_user() {
   }
 
   const userId = assignUserId();
-  const newClient = new Client(nameInput, emailInput, userId, balanceInput);
+  const newClient = new Client(capitalizedName, emailInput, userId, balanceInput);
   clients.push(newClient);
+  clients.sort((a, b) => a.name.localeCompare(b.name));
   localStorage.setItem("clients", JSON.stringify(clients));
 
   updateTable();
