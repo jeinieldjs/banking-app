@@ -12,10 +12,14 @@ class Client {
 }
 
 let initialClients = [
-  new Client("Anna Medina", "annamedina@gmail.com", 102893, 5000),
-  new Client("Bruno Cruz", "brunocruz@yahooo.com", 182203, 250000),
-  new Client("Chay Pena", "chaypena27@gmail.com", 960405, 300),
-  new Client("Dexter Lim", "dexlim@yahoo.com", 290917, 39000),
+  new Client("Ayala, Marissa Yap", "mayala@yahoo.com", "ID1692264379273", 85000),
+  new Client("Cruz, Bruno Solano", "brunocruz@yahoo.com", "ID1679072730309", 250000),
+  new Client("Felipe, Edward Daez", "edfelipe@yahoo.com", "	ID1692264905895", 85000),
+  new Client("Lim, Dexter Go", "dexlim@yahoo.com", "ID1686585600062", 39000),
+  new Client("Maranan, Pedro Reyes", "pedreymaranan@gmail.com", "ID1692264222480", 15000),
+  new Client("Medina, Anna Perez", "annamedina@gmail.com", "ID1692258955919", 5000),
+  new Client("Pena, Chay Marquez", "chaypena27@gmail.com", "ID1583371815753", 300)
+  
 ];
 
 let clients = localStorage.getItem("clients")
@@ -37,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     usernameSpan.style.color = "#68A225";
 
     let dateContainer = document.createElement("div");
-    dateContainer.setAttribute("id", "date-container");
+    /*dateContainer.setAttribute("id", "date-container");*/
+    dateContainer.setAttribute("class", "dash-containers");
     adminDisplay.appendChild(dateContainer);
 
     function updateDateTime() {
@@ -114,3 +119,65 @@ document.addEventListener("DOMContentLoaded", function () {
     loadToDoItems();
   }
 });
+
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth();
+const currentYear = currentDate.getFullYear();
+
+let daysRemaining;
+
+if (currentMonth === 1) { 
+  if (currentDay === 15) { 
+    daysRemaining = 0;
+  } else if ((currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0) {
+    daysRemaining = currentDay <= 29 ? 29 - currentDay : 30 + (29 - currentDay);
+  } else {
+    daysRemaining = currentDay <= 28 ? 28 - currentDay : 30 + (28 - currentDay);
+  }
+} else if (currentMonth === 3 || currentMonth === 5 || currentMonth === 8 || currentMonth === 10) {
+  if (currentDay === 15||currentDay === 30) {
+    daysRemaining = 0;
+  } else if (currentDay < 15) {
+    daysRemaining = 15 - currentDay;
+  } else if (currentDay > 15){
+    daysRemaining = 30 - currentDay;
+  }
+} else if (currentDay === 15||currentDay === 30) {
+  daysRemaining = 0;
+} else if (currentDay < 15) {
+  daysRemaining = 15 - currentDay;
+} else if (currentDay > 15 && currentDay < 30){
+  daysRemaining = 30 - currentDay
+} else if (currentDay === 31){
+  daysRemaining = 31 - currentDay + 15;
+}
+
+const countdownDisplay = document.createElement("div");
+countdownDisplay.setAttribute("id", "countdown-container");
+
+const countdownText = document.createElement("div");
+countdownText.textContent = "Days 'til payday:";
+countdownText.setAttribute("id", "countdown-text");
+countdownDisplay.appendChild(countdownText);
+
+const countdownNumber = document.createElement("div");
+countdownNumber.textContent = daysRemaining;
+countdownNumber.setAttribute("id", "countdown-number");
+countdownDisplay.appendChild(countdownNumber);
+
+const countdownMessage = document.createElement("div");
+countdownMessage.setAttribute("id", "countdown-message");
+
+if (daysRemaining === 0) {
+  countdownMessage.textContent = "Today is the day!🎉";
+} else if (daysRemaining === 1) {
+  countdownMessage.textContent = "Sooo close!";
+} else {
+  countdownMessage.textContent = "Hang in there!";
+}
+
+countdownDisplay.appendChild(countdownMessage);
+let adminDisplay = document.getElementById("admin-dash");
+adminDisplay.appendChild(countdownDisplay);
+;

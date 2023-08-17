@@ -20,10 +20,14 @@ function list_clients() {
 
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
-  ["Name", "Email", "User ID", "Balance(PHP)", "Delete"].forEach(
+  ["Name", "Email", "User ID (Initial Password)", "Balance(PHP)", "Delete"].forEach(
     (headerText) => {
       const th = document.createElement("th");
       th.textContent = headerText;
+      if (headerText ==="Name"){
+        th.classList.add("name-header");
+      }
+
       headerRow.appendChild(th);
     }
   );
@@ -37,7 +41,7 @@ function list_clients() {
     const userIdCell = document.createElement("td");
     const balanceCell = document.createElement("td");
     const deleteCell = document.createElement("td");
-
+    nameCell.classList.add("name-cell");
     nameCell.textContent = client.name;
     emailCell.textContent = client.email;
     userIdCell.textContent = client.userId;
@@ -83,7 +87,7 @@ function validateEmail(email) {
 }
 
 function assignUserId() {
-  return Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
+  return 'ID' + (new Date()).getTime();
 }
 
 function formatName(name) {
@@ -129,11 +133,19 @@ function create_user() {
     return;
   }
 
-  const existingClient = clients.find(
-    (client) => client.name.toLowerCase() === capitalizedName.toLowerCase() || client.email === emailInput);
+  const existingName = clients.find(
+    (client) => client.name.replace(/,/g, "").toLowerCase() === capitalizedName.replace(/,/g, "").toLowerCase());
   
-  if (existingClient) {
-    alert("A client with the same name or email already exists.");
+  if (existingName) {
+    alert("User already exists.");
+    return;
+  }
+
+  const existingEmail = clients.find(
+    (client) => client.email === emailInput);
+  
+  if (existingEmail) {
+    alert("Email entered is already registered to another user.");
     return;
   }
 

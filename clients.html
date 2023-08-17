@@ -46,18 +46,18 @@
       <div id="create-client">
         <div id="client-form">
           <div class="input-client">
-            <label for="name-input">Name:</label>
-            <input type="text" id="name-input" required /><br />
+            <label for="name-input">Full name:</label>
+            <input type="text" id="name-input" placeholder="Last, First Middle" required /><br />
           </div>
 
           <div class="input-client">
             <label for="email-input">Email:</label>
-            <input type="email" id="email-input" required /><br />
+            <input type="email" id="email-input" placeholder="john.doe@example.com" required/><br />
           </div>
 
           <div class="input-client">
             <label for="balance-input">Balance:</label>
-            <input type="number" id="balance-input" required min="0" /><br />
+            <input type="number" id="balance-input" placeholder="must not be < 0.00 PHP" requireed min="0" /><br />
           </div>
           <div id="btn-container">
             <button type="button" id="add-client-btn">Add Client</button>
