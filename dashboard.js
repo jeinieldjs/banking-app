@@ -127,34 +127,6 @@ const currentYear = currentDate.getFullYear();
 
 let daysRemaining;
 
-/*if (currentMonth === 1) { //kung feb
-  if (currentDay === 15) { 
-    daysRemaining = 0;
-  } else if (currentDay < 15){
-    daysRemaining = 15 - currentDay;
-  } else if ((currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0) { //kung leap year
-    daysRemaining = currentDay <= 29 && currentDay > 15 ? 29 - currentDay : 30 + (29 - currentDay);
-  } else { //kung di leap year
-    daysRemaining = currentDay <= 28 && currentDay > 15 ? 28 - currentDay : 30 + (28 - currentDay);
-  } 
-} else if (currentMonth === 3 || currentMonth === 5 || currentMonth === 8 || currentMonth === 10) { //para sa 30 days
-  if (currentDay === 15||currentDay === 30) {
-    daysRemaining = 0;
-  } else if (currentDay < 15) {
-    daysRemaining = 15 - currentDay;
-  } else if (currentDay > 15){
-    daysRemaining = 30 - currentDay;
-  }
-} else if (currentDay === 15||currentDay === 30) { //para sa 31 days ---> must be separated kasi nagnenegative if hindi
-  daysRemaining = 0;
-} else if (currentDay < 15) {
-  daysRemaining = 15 - currentDay;
-} else if (currentDay > 15 && currentDay < 30){
-  daysRemaining = 30 - currentDay
-} else if (currentDay === 31){
-  daysRemaining = 31 - currentDay + 15;
-}*/
-
 if (currentDay === 15|| currentDay === 30){
   daysRemaining = 0;
 } else if ([0,2,4,6,7,9,11].includes(currentMonth)){
