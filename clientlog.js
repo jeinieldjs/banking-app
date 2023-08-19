@@ -1,3 +1,4 @@
+let clients = JSON.parse(localStorage.getItem("clients"));
 let clientLogDetails = document.createElement('div');
 clientLogDetails.setAttribute('id', 'log-details');
 document.body.appendChild(clientLogDetails);
@@ -28,15 +29,22 @@ logButton.setAttribute('id', 'log-button');
 logButton.textContent = 'LOG IN';
 clientLogDetails.appendChild(logButton);
 
-logButton.addEventListener('click', function () {
-    let email = document.getElementById('email').value; 
-    let password = document.getElementById('password').value;
 
-    if (email === 'Admin1' && password === 'admin123') {
-        localStorage.setItem('loggedInUser', username);
-        window.location.href = 'dashboard.html';
+logButton.addEventListener('click', function () {
+    let loggedEmail = document.getElementById('email').value; 
+    let loggedPassword = document.getElementById('password').value;
+    const existingClient = clients.find(client => client.email === loggedEmail);
+
+    if (existingClient) {
+        if(existingClient.userId === loggedPassword){
+            let loggedUsername = existingClient.name;
+            localStorage.setItem('loggedClient', loggedUsername);
+            window.location.href = 'clientdash.html';
+        } else {
+            alert('Login failed. Please check password.');
+        }
     } else {
-        alert('Login failed. Please check your email and password.');
+        alert('Login failed. Email entered is not registered to an existing client.');
     }
 });
 
