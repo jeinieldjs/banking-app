@@ -2,6 +2,18 @@ let logDetails = document.createElement('div');
 logDetails.setAttribute('id','log-details');
 document.body.appendChild(logDetails);
 
+let logHeader = document.createElement('div');
+logHeader.setAttribute('class', 'log-header')
+let logText = document.createElement('h1');
+logText.textContent = 'ADMIN LOG IN';
+let clientLogLink = document.createElement('p');
+clientLogLink.innerHTML = 'Not an Admin? Click <a href="clientlog.html">here</a>.';
+logHeader.appendChild(logText);
+logHeader.appendChild(clientLogLink);
+logDetails.appendChild(logHeader);
+logHeader.style.padding = '10px';
+logHeader.style.textAlign = 'center';
+
 let usernameInput = document.createElement('div');
 let passwordInput = document.createElement('div');
 usernameInput.setAttribute('class','log-input');
