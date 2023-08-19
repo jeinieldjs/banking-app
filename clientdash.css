@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header{
+    background-color: #b3de81;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+#header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#logo-container{
+    height: 100px;
+    padding-right: 20px;
+}
+
+#logo-container img{
+    height: 90%;
+}
+
+#logout-container{
+    align-self: center;
+    margin-right: 20px;
+}
+
+#logout-btn {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-family:'Merriweather Sans', sans-serif;
+    padding: 5px;
+    background-color: #68a225ac;
+    border-radius: 5px;
+    color: #FDFFFF;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#logout-btn:hover{
+    background-color:#FDFFFF;
+    color: #265C00;
+}

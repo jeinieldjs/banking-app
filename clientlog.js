@@ -38,7 +38,7 @@ logButton.addEventListener('click', function () {
     if (existingClient) {
         if(existingClient.userId === loggedPassword){
             let loggedUsername = existingClient.name;
-            localStorage.setItem('loggedClient', loggedUsername);
+            localStorage.setItem('loggedInUser', loggedUsername);
             window.location.href = 'clientdash.html';
         } else {
             alert('Login failed. Please check password.');
@@ -48,3 +48,4 @@ logButton.addEventListener('click', function () {
     }
 });
 
+//pwede na mag log in si client. next to do: clientdash.html
