@@ -22,6 +22,7 @@ body {
     padding: 5px;
     display: flex;
     flex-direction: row;
+    width: 100vw;
 }
 #header-text{
     display: flex;
@@ -40,7 +41,7 @@ body {
     margin-left: 50px;
     margin-top: 200px;
     width: 400px;
-    height: 150px;
+    height: 220px;
     background-color: #b3de81ce;
     border-radius: 25px;;
     display: flex;
@@ -82,4 +83,3 @@ body {
     background-color: #68a225ac;
     color: #FDFFFF;
 }
-
