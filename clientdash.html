@@ -20,7 +20,8 @@
 
   <body>
     <div id="header">
-      <div id="logo-container">
+      
+        <div id="logo-container">
         <img
           src="https://cdn-icons-png.flaticon.com/512/584/584093.png"
           alt="logo"
@@ -33,11 +34,45 @@
           Bringing Home the Bacon: Your Partner in Financial Growth!
         </p>
       </div>
+    
+    </div>
+    
+    <div id='logout-container'>
+      <button id ='logout-btn'>LOG OUT</button>
     </div>
 
-      <div id='logout-container'>
-      <button id ='logout-btn'>LOG OUT</button>
-      </div>
+    <div id="content-wrapper">
+
+        <div id="greet-container"></div>
+        
+        <div id="main-content">
+            <div id="left-containers">
+                 <div class="left-panel" id="balance-display">
+                    <h1>Current Balance (PHP):</h1>
+                    <div id="balance-amount"></div>
+                </div>
+        
+                <div class="left-panel" id="add-display">
+                    <div id="expense-form">
+                        <div class="input-expense">
+                            <label for="item-input">Item:</label>
+                            <input type="text" id="item-input" placeholder="expense item" required /><br />
+                        </div>
+      
+                        <div class="input-expense">
+                            <label for="price-input">Price:</label>
+                            <input type="number" id="price-input" placeholder="must not be < 0.00 PHP" requireed min="0.01" /><br />
+                        </div>
+                        <div id="btn-container">
+                            <button type="button" id="add-expense-btn">Add Expense</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+                <div class="right-panel" id="expense-display"></div>
+        </div>
+    </div>
     
     <script src="budget.js"></script>
     <!--<script src="auth.js"></script>-->
