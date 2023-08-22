@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function logoutUser() {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "clientlog.html";
+    window.location.href = "index.html";
     alert("Logout Successfully!");
   }
 
