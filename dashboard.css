@@ -1,305 +1,325 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    /*background-color:  #FDFFFF    ;*/
-    background-image: url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    min-width: 1068px;
+  /*background-color:  #FDFFFF    ;*/
+  background-image: url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  min-width: 1068px;
 }
 
-#logoText{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 200px;
-    padding: 5px;
-    padding-bottom: 50px;
+#logoText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  padding: 5px;
+  padding-bottom: 50px;
 }
 
-#logoText img{
-    height: 50px;
-    width: auto;
-    padding-right: 5px;
+#logoText img {
+  height: 50px;
+  width: auto;
+  padding-right: 5px;
 }
 
 .sidenav {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color:#b3de81;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #b3de81;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
 .sidenav a {
-    text-transform: uppercase;
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
-   
+
 .sidenav a.active {
-    background-color: #04AA6D;
-    color: white;
+  background-color: #04aa6d;
+  color: white;
 }
-  
+
 .sidenav a:hover:not(.active) {
-    background-color: #787975 ;
-    color: #FDFFFF;
+  background-color: #787975;
+  color: #fdffff;
 }
-  
+
 #admin-dash {
-    margin-left: 200px;
-    padding: 40px 16px;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  margin-left: 200px;
+  padding: 40px 16px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .dash-containers {
-    font-size: 1.5rem;
-    background-color: #265c00ae;
-    color: #FDFFFF;
-    width: 400px;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 5px;
+  font-size: 1.5rem;
+  background-color: #265c00ae;
+  color: #fdffff;
+  width: 400px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-#todo-container{
-    margin-top: 20px;
-    width: 400px;
-    background-color: #265c00ae;
-    color: white;
-    display: flex;
-    flex-direction: column;
+#todo-container {
+  margin-top: 20px;
+  width: 400px;
+  background-color: #265c00ae;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 #task-input {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
-#task-input::placeholder{
-    color: #265c00;
+#task-input::placeholder {
+  color: #265c00;
 }
 
-.list-item{
-    list-style-type: none;
-    padding-left: 10px;
-    text-transform: uppercase;
+.list-item {
+  list-style-type: none;
+  padding-left: 10px;
+  text-transform: uppercase;
 }
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 #table-container {
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 200px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
 }
 
-
-#client-info{
-    border-collapse: collapse;
-    width: 800px;
-    margin-bottom: 20px;
-    background-color: #fdffffe0;
+#client-info {
+  border-collapse: collapse;
+  width: 800px;
+  margin-bottom: 20px;
+  background-color: #fdffffe0;
 }
 
-#client-info th,#client-info td {
-    padding: 10px;
-    border: 1px solid #dddddd;
-    text-align: left;
+#client-info th,
+#client-info td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  text-align: left;
 }
 
 #client-info th {
-    background-color: #b3de81;
-    text-align: center;
+  background-color: #b3de81;
+  text-align: center;
 }
 
 #create-client {
-    margin-left: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .input-client {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#client-form{
-    width: 400px;
-    background-color: #b3de81c6;
-    padding: 10px;
-    border-radius: 10px;
+#client-form {
+  width: 400px;
+  background-color: #b3de81c6;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#client-form input{
-    width: 250px;
-    border-radius: 5px;
-    margin-left:10px;
-    height: 1.5rem;
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 3px;
+#client-form input {
+  width: 250px;
+  border-radius: 5px;
+  margin-left: 10px;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 3px;
 }
 
-#client-form label{
-    width: 100px;
-    margin-right: 10px;
-    font-size: 1rem;
+#client-form label {
+  width: 100px;
+  margin-right: 10px;
+  font-size: 1rem;
 }
 
-#create-client button{
-    margin-top: 5px;
-    font-size: 0.7rem;
-    font-family:'Merriweather Sans', sans-serif;
-    padding: 3px;
-    border-radius: 5px;
-    background-color:#FDFFFF;
-    color: #265C00;
-    border: none;
+#create-client button {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #fdffff;
+  color: #265c00;
+  border: none;
 }
-    
-#create-client button:hover{
-        background-color: #68a225ac;
-        color: #FDFFFF;
+
+#create-client button:hover {
+  background-color: #68a225ac;
+  color: #fdffff;
 }
 
 #btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .transaction-btn {
-    font-size: 1rem;
-    padding: 3px;
-    text-transform: uppercase;
-    background-color:#b3de81;
-    font-weight: 700;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
+  font-size: 1rem;
+  padding: 3px;
+  text-transform: uppercase;
+  background-color: #b3de81;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: none;
 }
 .transaction-btn:hover {
-    background-color:#265C00;
-    color:white;
-    border: none;
+  background-color: #265c00;
+  color: white;
+  border: none;
 }
-
 
 .transaction-fields {
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 3px;
-    background-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 3px;
+  background-color: transparent;
 }
 
-.transaction-fields::placeholder{
-    color: #265c00;
-   
+.transaction-fields::placeholder {
+  color: #265c00;
 }
 .transaction-headings {
-    font-size: 3rem;
-    padding-bottom: 20px;
-    text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-transform: uppercase;
 }
-.transaction-wrapper{
-    background-color: #fcfcfcae;
-    padding: 20px;
-    width: 500px;
-    margin: auto;
-    border: solid 2px #b3de81;
-    font-size: 1rem;
+.transaction-wrapper {
+  background-color: #fcfcfcae;
+  padding: 20px;
+  width: 500px;
+  margin: auto;
+  border: solid 2px #b3de81;
+  font-size: 1rem;
 }
 
 .balance-display {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 .balance-value {
-    font-weight: 700;
-    color:#265C00;
+  font-weight: 700;
+  color: #265c00;
 }
 
 .clients-selection {
-    font-size: 1rem;
-    background-color: transparent;
-    color:#306c05;
-    font-weight: 600;
-    padding: 3px;
-    width: 200px;
-    margin: 5px;
-    margin-top: 15px;
-    text-align: center;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #306c05;
+  font-weight: 600;
+  padding: 3px;
+  width: 200px;
+  margin: 5px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .participants {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
-.sender-details, .receipient-details{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.sender-details,
+.receipient-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.name-header, .name-cell {
-    width: 30%;
+.name-header,
+.name-cell {
+  width: 30%;
 }
-#countdown-container{
-    background-color: #265c00b3;
-    color: white;
-    font-size: 1rem;
-    border-radius: 25px;
-    width: 200px;
-    height: 180px;
-    padding: 10px;
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    text-align: center;
-  }
-  #countdown-text{
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  #countdown-number{
-    font-size: 5rem;
-    font-weight: 800;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  #countdown-message{
-    font-weight: 600;
-    text-transform: uppercase;
-  }
+#countdown-container {
+  background-color: #265c00b3;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  width: 200px;
+  height: 180px;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  text-align: center;
+}
+#countdown-text {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#countdown-number {
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#countdown-message {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.advice-container {
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.advice {
+  width: 800px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.advice-button {
+  padding: 10px;
+}
