@@ -15,16 +15,23 @@ let isLoggedIn = () => {
   if (!loggedUser) {
     if (
       window.location.pathname !== path + "/" &&
-      window.location.pathname !== path + "/index.html"
+      window.location.pathname !== path + "/index.html" &&
+      window.location.pathname !== path + "/clientlog.html"
     ) {
       window.location.pathname = path + "/";
     }
   } else {
+    const pathName =
+      loggedUser === "Admin1"
+        ? path + "/dashboard.html"
+        : path + "/clientdash.html";
+
     if (
       window.location.pathname === path + "/" ||
-      window.location.pathname === path + "/index.html"
+      window.location.pathname === path + "/index.html" ||
+      window.location.pathname === path + "/clientlog.html"
     ) {
-      window.location.pathname = path + "/dashboard.html";
+      window.location.pathname = pathName;
     }
   }
 };
