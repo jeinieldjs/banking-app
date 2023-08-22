@@ -1,32 +1,32 @@
-class Client {
-  constructor(name, email, userId, balance) {
-    this.name = name;
-    this.email = email;
-    this.userId = userId;
-    this.balance = balance;
-  }
+// class Client {
+//   constructor(name, email, userId, balance) {
+//     this.name = name;
+//     this.email = email;
+//     this.userId = userId;
+//     this.balance = balance;
+//   }
 
-  displayInfo() {
-    return `${this.name} - ${this.email} (ID: ${this.userId}) - Balance: $${this.balance}`;
-  }
-}
+//   displayInfo() {
+//     return `${this.name} - ${this.email} (ID: ${this.userId}) - Balance: $${this.balance}`;
+//   }
+// }
 
-let initialClients = [
-  new Client("Ayala, Marissa Yap", "mayala@yahoo.com", "ID1692264379273", 85000),
-  new Client("Cruz, Bruno Solano", "brunocruz@yahoo.com", "ID1679072730309", 250000),
-  new Client("Felipe, Edward Daez", "edfelipe@yahoo.com", "	ID1692264905895", 85000),
-  new Client("Lim, Dexter Go", "dexlim@yahoo.com", "ID1686585600062", 39000),
-  new Client("Maranan, Pedro Reyes", "pedreymaranan@gmail.com", "ID1692264222480", 15000),
-  new Client("Medina, Anna Perez", "annamedina@gmail.com", "ID1692258955919", 5000),
-  new Client("Pena, Chay Marquez", "chaypena27@gmail.com", "ID1583371815753", 300)
+// let initialClients = [
+//   new Client("Ayala, Marissa Yap", "mayala@yahoo.com", "ID1692264379273", 85000),
+//   new Client("Cruz, Bruno Solano", "brunocruz@yahoo.com", "ID1679072730309", 250000),
+//   new Client("Felipe, Edward Daez", "edfelipe@yahoo.com", "	ID1692264905895", 85000),
+//   new Client("Lim, Dexter Go", "dexlim@yahoo.com", "ID1686585600062", 39000),
+//   new Client("Maranan, Pedro Reyes", "pedreymaranan@gmail.com", "ID1692264222480", 15000),
+//   new Client("Medina, Anna Perez", "annamedina@gmail.com", "ID1692258955919", 5000),
+//   new Client("Pena, Chay Marquez", "chaypena27@gmail.com", "ID1583371815753", 300)
   
-];
+// ];
 
-let clients = localStorage.getItem("clients")
-  ? JSON.parse(localStorage.getItem("clients"))
-  : initialClients;
+// let clients = localStorage.getItem("clients")
+//   ? JSON.parse(localStorage.getItem("clients"))
+//   : initialClients;
 
-localStorage.setItem("clients", JSON.stringify(clients));
+// localStorage.setItem("clients", JSON.stringify(clients));
 
 document.addEventListener("DOMContentLoaded", function () {
   let adminDisplay = document.getElementById("admin-dash");
