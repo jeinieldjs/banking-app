@@ -304,12 +304,22 @@ body {
 }
 
 .advice-container {
-  text-align: center;
   margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .advice {
   width: 800px;
-  min-height: 50px;
-  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.advice-button {
+  padding: 10px;
 }

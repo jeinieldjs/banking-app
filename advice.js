@@ -7,7 +7,7 @@ async function getAdvice() {
 
   adviceElement.textContent = await data.slip.advice;
 
-  console.log(data.slip.advice);
+  // console.log(data.slip.advice);
 }
 
 adviceButton.addEventListener("click", getAdvice);
