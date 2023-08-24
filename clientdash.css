@@ -201,3 +201,9 @@ body {
 #expense-display h1{
     text-align: left;
 }
+
+#expense-table{
+    width: 90%;
+    text-align: center;
+    margin:auto;
+}

@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addExpense() {
     let item = document.getElementById('item-input').value;
     let cost = parseFloat(document.getElementById('price-input').value);
+    let timestamp = new Date().toLocaleString();
 
     let tableBody = document.getElementById('expense-body');
     let newRow = tableBody.insertRow();
@@ -58,8 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let itemCell = newRow.insertCell(0);
     let costCell = newRow.insertCell(1);
     let actionCell = newRow.insertCell(2);
+    let timeCell = newRow.insertCell(3);
     itemCell.textContent = item;
     costCell.textContent = cost.toFixed(2);
     actionCell.innerHTML = '<i class="fas fa-edit edit-icon"></i> <i class="fas fa-trash delete-icon"></i>';
+    timeCell.textContent = timestamp;
   }
 });
