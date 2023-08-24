@@ -316,10 +316,22 @@ body {
   width: 800px;
   text-align: center;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #265c00ae;
   color: white;
 }
 
 .advice-button {
-  padding: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-family: "Merriweather Sans", sans-serif;
+  border-radius: 5px;
+  background-color: #fdffff;
+  color: #265c00;
+  border: none;
+}
+
+.advice-button:hover {
+  background-color: #68a225ac;
+  color: #fdffff;
 }
