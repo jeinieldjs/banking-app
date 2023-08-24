@@ -207,3 +207,14 @@ body {
     text-align: center;
     margin:auto;
 }
+
+#expense-body tr:nth-child(odd) {
+    background-color: transparent;
+  }
+#expense-table thead{
+    font-size: 1.5rem;
+}
+
+#expense-table thead, #expense-body tr:nth-child(even) {
+    background-color: #f2f2f2a9;
+  }
