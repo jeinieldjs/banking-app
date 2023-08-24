@@ -44,4 +44,22 @@ document.addEventListener("DOMContentLoaded", function () {
       balanceDisplay.textContent = formatBalance;
     }
   }
+
+  let addExpenseBtn = document.getElementById('add-expense-btn');
+  addExpenseBtn.addEventListener('click',addExpense);
+
+  function addExpense() {
+    let item = document.getElementById('item-input').value;
+    let cost = parseFloat(document.getElementById('price-input').value);
+
+    let tableBody = document.getElementById('expense-body');
+    let newRow = tableBody.insertRow();
+
+    let itemCell = newRow.insertCell(0);
+    let costCell = newRow.insertCell(1);
+    let actionCell = newRow.insertCell(2);
+    itemCell.textContent = item;
+    costCell.textContent = cost.toFixed(2);
+    actionCell.innerHTML = '<i class="fas fa-edit edit-icon"></i> <i class="fas fa-trash delete-icon"></i>';
+  }
 });

@@ -193,8 +193,11 @@ body {
 
 #expense-display {
     background-color:#b3de81cd;
-    text-align: center;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
 
+}
+
+#expense-display h1{
+    text-align: left;
 }
