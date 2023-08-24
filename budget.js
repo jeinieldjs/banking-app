@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let userDisplay = document.getElementById("greet-container");
   let loggedInUser = localStorage.getItem("loggedInUser");
 
+  let loggedClient = clients.find((client) => client.name === loggedInUser);
+  let balanceDisplay = document.getElementById("balance-amount");
+
   if (loggedInUser) {
     let greet = document.createElement("h1");
     greet.innerHTML = `WELCOME, <span id="usernameSpan">${loggedInUser}</span>!`;
@@ -31,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    let clients = JSON.parse(localStorage.getItem("clients"));
-    let loggedClient = clients.find((client) => client.name === loggedInUser);
+ 
 
     if (loggedClient) {
       let userBalance = loggedClient.balance.toFixed(2);
@@ -40,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       });
-      let balanceDisplay = document.getElementById("balance-amount");
       balanceDisplay.textContent = formatBalance;
     }
   }
@@ -58,11 +59,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let itemCell = newRow.insertCell(0);
     let costCell = newRow.insertCell(1);
-    let actionCell = newRow.insertCell(2);
-    let timeCell = newRow.insertCell(3);
+    let timeCell = newRow.insertCell(2);
+    let deleteCell = newRow.insertCell(3);
+    
     itemCell.textContent = item;
     costCell.textContent = cost.toFixed(2);
-    actionCell.innerHTML = '<i class="fas fa-edit edit-icon"></i> <i class="fas fa-trash delete-icon"></i>';
+    deleteCell.innerHTML = '<i class="fas fa-trash delete-icon"></i>';
     timeCell.textContent = timestamp;
+
+    loggedClient.balance -= cost;
+    let updatedBalance = loggedClient.balance.toFixed(2);
+    let formattedBalance = parseFloat(updatedBalance).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    balanceDisplay.textContent = formattedBalance; 
+
+    if (loggedClient.balance < 0){
+      balanceDisplay.style.color = 'red';
+    }
   }
+
+  let deleteExp = document.querySelector('.delete-icon');
+  deleteExp.addEventListener('click', deleteExpense);
+
+function deleteExpense(){
+  const confirmed = confirm('Are you sure you want to remove this expense item?');
+  if (confirmed){
+    tableBody.removeChild(newRow);
+    loggedClient.balance += cost;
+  }
+}
 });
+
+//expenses can be added na, pero di pa nauupdate sa local storage yung balance and expenses ni client
