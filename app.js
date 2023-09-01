@@ -67,7 +67,7 @@ const initialTransactions = [
   },
   {
     type: "Deposit",
-    sender: "Ayala, Marissa Yap",
+    user: "Ayala, Marissa Yap",
     date: new Date().toLocaleString(),
     amount: 1000,
   },

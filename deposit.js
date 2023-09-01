@@ -1,4 +1,5 @@
 let clients = JSON.parse(localStorage.getItem("clients"));
+let transactions = JSON.parse(localStorage.getItem("transactions"));
 
 let clientsDropdown = document.querySelector("#clients-dropdown");
 let clientBalance = document.querySelector("#client-balance");
@@ -25,19 +26,30 @@ let deposit = () => {
   let client = findUser(clientsDropdown.value);
   let depositAmount = parseFloat(depositInput.value);
 
-  if (depositInput.value.trim() === ""){
-    alert ("Please enter an amount to deposit");
+  if (depositInput.value.trim() === "") {
+    alert("Please enter an amount to deposit");
     return;
   }
 
-  if (depositAmount <= 0 || isNaN(depositAmount)){
+  if (depositAmount <= 0 || isNaN(depositAmount)) {
     alert("Amount to be deposited is invalid.");
     return;
   }
 
-
   client.balance = parseFloat(client.balance) + depositAmount;
   localStorage.setItem("clients", JSON.stringify(clients));
+
+  const newTransaction = {
+    type: "Deposit",
+    user: client.name,
+    amount: depositAmount,
+    date: new Date().toLocaleString(),
+  };
+
+  const updatedTransactions = [...transactions, newTransaction];
+
+  localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
+
   updateValues();
   alert("Balance added successfully!");
 };
