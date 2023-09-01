@@ -26,7 +26,6 @@ body {
   padding: 5px;
   display: flex;
   flex-direction: row;
-  width: 100vw;
 }
 #header-text {
   display: flex;
