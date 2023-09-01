@@ -6,7 +6,7 @@ const filteredTransactions = transactions.filter(
   (item) => item.user === user || item.sender === user || item.receiver === user
 );
 
-console.log(filteredTransactions);
+// console.log(filteredTransactions);
 
 filteredTransactions.forEach((element) => {
   const transaction = document.createElement("div");
