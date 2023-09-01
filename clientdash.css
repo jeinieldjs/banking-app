@@ -324,6 +324,7 @@ body {
     color:#265C00;
     text-transform: uppercase;
 }
+
   @media screen and (min-width: 400px) and (max-width: 774px){
     body{
         height: 100%;
