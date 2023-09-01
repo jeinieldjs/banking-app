@@ -8,6 +8,9 @@ let transferInput = document.querySelector("#transfer-input");
 let transferButton = document.querySelector("#transfer-button");
 
 let clients = JSON.parse(localStorage.getItem("clients"));
+let transactions = JSON.parse(localStorage.getItem("transactions"));
+
+// console.log(transactions);
 
 function updateSenderValues() {
   clients.forEach((client, index) => {
@@ -63,17 +66,17 @@ function transfer() {
   let receiver = findUser(receiverDropdown.value);
   let transferAmount = parseFloat(transferInput.value);
 
-  if (transferInput.value.trim() === ""){
+  if (transferInput.value.trim() === "") {
     alert("Please enter an amount to transfer.");
     return;
   }
 
-  if (transferAmount <= 0){
+  if (transferAmount <= 0) {
     alert("Transfer amount is invalid");
     return;
   }
 
-  if (sender.balance < transferAmount){
+  if (sender.balance < transferAmount) {
     alert("Sender's balance is insufficient for this transfer");
     return;
   }
@@ -82,6 +85,20 @@ function transfer() {
   receiver.balance = parseFloat(receiver.balance) + parseFloat(transferAmount);
 
   localStorage.setItem("clients", JSON.stringify(clients));
+
+  // add enw transaction to localstorage 'transactions'
+
+  const newTransaction = {
+    type: "Transfer",
+    sender: sender.name,
+    receiver: receiver.name,
+    amount: transferAmount,
+    date: new Date().toLocaleString(),
+  };
+
+  const updatedTransactions = [...transactions, newTransaction];
+
+  localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
 
   alert("Balance was transferred successfully");
 

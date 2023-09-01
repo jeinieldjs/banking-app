@@ -1,8 +1,7 @@
 const transactionsElement = document.getElementById("transactions");
-
 const transactions = JSON.parse(localStorage.getItem("transactions"));
 
-console.log(transactions);
+// console.log(transactions);
 
 transactions.forEach((transaction) => {
   const transactionElement = document.createElement("div");
