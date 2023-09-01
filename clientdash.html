@@ -51,9 +51,21 @@
 
           <div class="left-panel" id="transaction-display">
             <div id="transaction-container">
-              <button class="trans-btn" id="deposit-btn"><img src='images/deposit.png' class="trans-img"/><br>DEPOSIT</button>
-              <button class="trans-btn" id="withdraw-btn"><img src='images/withdraw.png' class="trans-img"/><br>WITHDRAW</button>
-              <button class="trans-btn" id="transfer-btn"><img src='images/transfer.png' class="trans-img"/><br>TRANSFER</button>
+              <button class="trans-btn" id="deposit-btn">
+                <img src="images/deposit.png" class="trans-img" /><br />DEPOSIT
+              </button>
+              <button class="trans-btn" id="withdraw-btn">
+                <img
+                  src="images/withdraw.png"
+                  class="trans-img"
+                /><br />WITHDRAW
+              </button>
+              <button class="trans-btn" id="transfer-btn">
+                <img
+                  src="images/transfer.png"
+                  class="trans-img"
+                /><br />TRANSFER
+              </button>
             </div>
           </div>
 
@@ -85,26 +97,27 @@
             </div>
           </div>
         </div>
-        
-        
+
         <div class="right-panel" id="expense-display">
           <h1>EXPENSES:</h1>
-            <table id="expense-table">
-              <thead>
-                <tr>
-                  <th>ITEM</th>
-                  <th>COST</th>
-                  <th>DATE/TIME ADDED</th>
-                  <th>DELETE</th>
-                </tr>
-              </thead>
-              <tbody id="expense-body"></tbody>
-            </table>
+          <table id="expense-table">
+            <thead>
+              <tr>
+                <th>ITEM</th>
+                <th>COST</th>
+                <th>DATE/TIME ADDED</th>
+                <th>DELETE</th>
+              </tr>
+            </thead>
+            <tbody id="expense-body"></tbody>
+          </table>
         </div>
       </div>
+      <div class="user-transactions"><h1>Transactions</h1></div>
     </div>
 
     <script src="budget.js"></script>
+    <script src="client-transactions.js"></script>
     <script src="auth.js"></script>
   </body>
 </html>

@@ -1,374 +1,385 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-image: linear-gradient(to bottom, rgba(252, 252, 252, 0.925), rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0)),url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin: auto;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(252, 252, 252, 0.925),
+      rgba(252, 252, 252, 0.5),
+      rgba(252, 252, 252, 0)
+    ),
+    url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
 }
 
-#header{
-    background-color: #b3de81;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
+#header {
+  background-color: #b3de81;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
 }
-#header-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#logo-container{
-    height: 50px;
-    padding-right: 20px;
-}
-
-#logo-container img{
-    height: 90%;
+#logo-container {
+  height: 50px;
+  padding-right: 20px;
 }
 
-#logout-container{
-    align-self: center;
-    margin-right: 20px;
+#logo-container img {
+  height: 90%;
+}
+
+#logout-container {
+  align-self: center;
+  margin-right: 20px;
 }
 
 #logout-btn {
-    margin-top: 5px;
-    font-size: 1rem;
-    font-family:'Merriweather Sans', sans-serif;
-    padding: 5px;
-    background-color: #68a225ac;
-    border-radius: 5px;
-    color: #FDFFFF;
-    border: none;
-    position: absolute;
-    top: 15px;
-    right: 30px;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 5px;
+  background-color: #68a225ac;
+  border-radius: 5px;
+  color: #fdffff;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 30px;
 }
 
-#logout-btn:hover{
-    background-color:#FDFFFF;
-    color: #265C00;
+#logout-btn:hover {
+  background-color: #fdffff;
+  color: #265c00;
 }
 
 #content-wrapper {
-    
-    padding: 20px;
-    margin-top: 20px;
-    margin: auto;
-    height: 100%;
-    width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 #main-content {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-#left-containers{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top:10px;
-    margin-right: 20px;
+#left-containers {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
-#greet-container{
-    margin: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#greet-container {
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .dash-containers {
-    font-size: 1.5rem;
-    background-color: #265c00ae;
-    color: #FDFFFF;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 5px;
+  font-size: 1.5rem;
+  background-color: #265c00ae;
+  color: #fdffff;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 #balance-display {
-    background-color:#b3de81cd;
-    text-align: center;
-    padding: 10px;
-    height: 200px;
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+  background-color: #b3de81cd;
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
-#balance-display h1{
-    align-self: flex-start;
-    text-transform: uppercase;
+#balance-display h1 {
+  align-self: flex-start;
+  text-transform: uppercase;
 }
-#add-display{
-    background-color:#b3de81cd;
-    text-align: center;
-    padding: 20px;
-    height: 200px;
-    width: 100%;
-    border-radius: 10px;
+#add-display {
+  background-color: #b3de81cd;
+  text-align: center;
+  padding: 20px;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .input-expense {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#expense-form{
-    width: 100%;
-    padding: 10px;
-    margin: auto;
+#expense-form {
+  width: 100%;
+  padding: 10px;
+  margin: auto;
 }
 
-#expense-form input{
-    width: 70%;
-    border-radius: 5px;
-    margin-left:10px;
-    height: 2.5rem;
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    margin-top:5px;
+#expense-form input {
+  width: 70%;
+  border-radius: 5px;
+  margin-left: 10px;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
-#expense-form label{
-    width: 100px;
-    margin-right: 10px;
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
+#expense-form label {
+  width: 100px;
+  margin-right: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-#add-expense-btn{
-    margin-top: 15px;
-    font-size: 1rem;
-    font-family:'Merriweather Sans', sans-serif;
-    padding: 5px 20px 5px 20px;
-    border-radius: 20px;
-    background-color:#FDFFFF;
-    color: #265C00;
-    border: none;
+#add-expense-btn {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  background-color: #fdffff;
+  color: #265c00;
+  border: none;
 }
-    
-#add-expense-btn:hover{
-    background-color: #68a225ac;
-    color: #FDFFFF;
+
+#add-expense-btn:hover {
+  background-color: #68a225ac;
+  color: #fdffff;
 }
 
 #btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #balance-amount {
-    font-size: 4rem;
-    padding-top: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px #265C00;
+  font-size: 4rem;
+  padding-top: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px #265c00;
 }
 
 #expense-display {
-    background-color:#b3de81cd;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    width: 60%;
-
+  background-color: #b3de81cd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 60%;
 }
 
-#expense-display h1{
-    text-align: left;
+#expense-display h1 {
+  text-align: left;
 }
 
-#expense-table{
-    width: 90%;
-    text-align: center;
-    margin:auto;
+#expense-table {
+  width: 90%;
+  text-align: center;
+  margin: auto;
 }
 
 #expense-body tr:nth-child(odd) {
-    background-color: transparent;
-  }
-#expense-table thead{
-    font-size: 1.5rem;
+  background-color: transparent;
+}
+#expense-table thead {
+  font-size: 1.5rem;
 }
 
-#expense-table thead, #expense-body tr:nth-child(even) {
-    background-color: #f2f2f2a9;
-  }
-
-#transaction-display{
-    width: 100%;
+#expense-table thead,
+#expense-body tr:nth-child(even) {
+  background-color: #f2f2f2a9;
 }
 
-#transaction-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
+#transaction-display {
+  width: 100%;
 }
 
-.trans-btn{
-    background-color: #b3de81cd;
-    border: none;
-    border-radius: 10px;
-    height: 200px;
-    width: 30%;
-    margin: 5px;
-    font-weight: 600;
+#transaction-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
 }
-.trans-btn:hover{
-    background-color: #fdffff8e;
-    border: 5px solid #b3de81;
 
+.trans-btn {
+  background-color: #b3de81cd;
+  border: none;
+  border-radius: 10px;
+  height: 200px;
+  width: 30%;
+  margin: 5px;
+  font-weight: 600;
+}
+.trans-btn:hover {
+  background-color: #fdffff8e;
+  border: 5px solid #b3de81;
 }
 .trans-img {
-    width: 90%;
-    height: 80%;
-    padding: 5px;
+  width: 90%;
+  height: 80%;
+  padding: 5px;
 }
 
 .modal {
-    height: 200px;
-    width: 380px;
-    display: flex;
-    flex-direction: column;
-    background-color:#265c00ca;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
+  height: 200px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: #265c00ca;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
 }
 
-.modal input{
-    height: 2.5rem;
-    padding:3px;
-    width: 90%;
-    margin-bottom: 5px;
-    border-radius: 5px;
+.modal input {
+  height: 2.5rem;
+  padding: 3px;
+  width: 90%;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
-.modal input::placeholder{
-    text-align:center;
-    text-transform: uppercase;
-    color:#265C00;
-    font-weight: 600;
-    padding:5px;
-    font-size: 1rem;
+.modal input::placeholder {
+  text-align: center;
+  text-transform: uppercase;
+  color: #265c00;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 1rem;
 }
 
 .modal button {
-    margin-top: 15px;
-    font-size: 0.8rem;
-    font-family:'Merriweather Sans', sans-serif;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
-    background-color:#FDFFFF;
-    color: #265C00;
-    border: none;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  background-color: #fdffff;
+  color: #265c00;
+  border: none;
 }
-        
-.modal button:hover{
-    background-color: #68a225ac;
-    color: #FDFFFF;
+
+.modal button:hover {
+  background-color: #68a225ac;
+  color: #fdffff;
 }
 
 .modal .close {
-    position: absolute;
-    right: 5%;
-    top: 2%;
-    font-size: 0.7rem;
-    color: white;
-    background-color: transparent;
-  }
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  font-size: 0.7rem;
+  color: white;
+  background-color: transparent;
+}
 
 #transfer-label {
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    padding-bottom: 5px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 5px;
 }
-#recipient-dropdown{
-    width: 90%;
-    height: 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 5px;
-    color:#265C00;
-    text-transform: uppercase;
+#recipient-dropdown {
+  width: 90%;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  color: #265c00;
+  text-transform: uppercase;
 }
 
-  @media screen and (min-width: 400px) and (max-width: 774px){
-    body{
-        height: 100%;
-    }
-    #main-content{
-        display: flex;
-        flex-direction: column;
-    }
+@media screen and (min-width: 400px) and (max-width: 774px) {
+  body {
+    height: 100%;
+  }
+  #main-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-    #left-containers, #expense-display{
-        width: 100%;
-    }
-    #expense-table thead{
-        font-size: 1rem;
-    }
-    #logout-btn {
-        margin-top: 5px;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 0.8rem;
-    }
-    #greet-container{
-        text-align: center;
-    }
-    #balance-amount{
-        font-size: 2.5rem;
-    }
-    #balance-display, #add-display{
-        height: auto;
-    }
+  #left-containers,
+  #expense-display {
+    width: 100%;
+  }
+  #expense-table thead {
+    font-size: 1rem;
+  }
+  #logout-btn {
+    margin-top: 5px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 0.8rem;
+  }
+  #greet-container {
+    text-align: center;
+  }
+  #balance-amount {
+    font-size: 2.5rem;
+  }
+  #balance-display,
+  #add-display {
+    height: auto;
+  }
 
-    #balance-display h1, #expense-display h1, #expense-form label{
-        font-size: 1.5rem;
-    }
-    #transaction-container{
-        height: 150px;
-        width: 100%;
+  #balance-display h1,
+  #expense-display h1,
+  #expense-form label {
+    font-size: 1.5rem;
+  }
+  #transaction-container {
+    height: 150px;
+    width: 100%;
+  }
+  .trans-btn {
+    height: 150px;
+    width: 30%;
+    margin: 7px;
+  }
+}
 
-    }
-    .trans-btn{
-        height: 150px;
-        width: 30%;
-        margin: 7px;
-
-    }
-  } 
+.user-transactions div {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
