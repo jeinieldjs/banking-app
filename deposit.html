@@ -34,6 +34,7 @@
         <a href="deposit.html" id="deposit">Deposit</a>
         <a href="withdraw.html" id="withdraw">Withdraw</a>
         <a href="transfer.html" id="transfer">Transfer</a>
+        <a href="transactions.html" id="transfer">Transactions</a>
         <a href="#" id="log-out">Log out</a>
       </div>
 
@@ -42,18 +43,29 @@
         <div class="transaction-wrapper">
           <label for="clients">Choose a user:</label>
 
-          <select class="clients-selection" name="clients" id="clients-dropdown"></select>
+          <select
+            class="clients-selection"
+            name="clients"
+            id="clients-dropdown"
+          ></select>
           <div class="client-info">
-            <div class="balance-display">Balance: <span class="balance-value" id="client-balance">0</span></div>
-              <input
-                class="transaction-fields"
-                type="number"
-                name="deposit-input"
-                id="deposit-input"
-                placeholder="Enter amount"
-              />
-              <br>
-            <input class= "transaction-btn" type="button" id="deposit-button" value="Deposit" />
+            <div class="balance-display">
+              Balance: <span class="balance-value" id="client-balance">0</span>
+            </div>
+            <input
+              class="transaction-fields"
+              type="number"
+              name="deposit-input"
+              id="deposit-input"
+              placeholder="Enter amount"
+            />
+            <br />
+            <input
+              class="transaction-btn"
+              type="button"
+              id="deposit-button"
+              value="Deposit"
+            />
           </div>
         </div>
       </div>
