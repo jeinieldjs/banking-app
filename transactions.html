@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Group 10 Banking App</title>
     <link href="dashboard.css" rel="stylesheet" type="text/css" />
-    <link href="withdraw.css" rel="stylesheet" type="text/css" />
+    <link href="transactions.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,39 +37,11 @@
         <a href="transactions.html" id="transfer">Transactions</a>
         <a href="#" id="log-out">Log out</a>
       </div>
-
-      <div class="withdraw-content">
-        <h1 class="transaction-headings">Withdraw Page</h1>
-        <div class="transaction-wrapper">
-          <label for="clients">Choose a user:</label>
-
-          <select
-            class="clients-selection"
-            name="clients"
-            id="clients-dropdown"
-          ></select>
-          <div class="client-info">
-            <div class="balance-display">
-              Balance: <span class="balance-value" id="client-balance">0</span>
-            </div>
-            <input
-              class="transaction-fields"
-              type="number"
-              name="withdraw-input"
-              id="withdraw-input"
-              placeholder="Enter amount"
-            /><br />
-            <input
-              class="transaction-btn"
-              type="button"
-              id="withdraw-button"
-              value="Withdraw"
-            />
-          </div>
-        </div>
+      <div id="transactions">
+        <h1>Transactions</h1>
       </div>
     </section>
-    <script src="withdraw.js" type="module"></script>
+    <script src="transactions.js" type="module"></script>
     <script src="auth.js"></script>
   </body>
 </html>
