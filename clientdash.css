@@ -81,10 +81,6 @@ body {
     margin-top:10px;
     margin-right: 20px;
 }
-.right-panel{
-    width: 60%;
-    margin-top:10px;
-}
 
 #greet-container{
     margin: auto;
@@ -166,8 +162,8 @@ body {
     margin-top: 15px;
     font-size: 1rem;
     font-family:'Merriweather Sans', sans-serif;
-    padding: 3px;
-    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
     background-color:#FDFFFF;
     color: #265C00;
     border: none;
@@ -195,6 +191,8 @@ body {
     background-color:#b3de81cd;
     border-radius: 10px;
     padding: 10px;
+    margin-top: 10px;
+    width: 60%;
 
 }
 
@@ -219,6 +217,41 @@ body {
     background-color: #f2f2f2a9;
   }
 
+#transaction-display{
+    width: 100%;
+}
+
+#transaction-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.trans-btn{
+    background-color: #b3de81cd;
+    border: none;
+    border-radius: 10px;
+    height: 200px;
+    width: 30%;
+    margin: 5px;
+    font-weight: 600;
+}
+.trans-btn:hover{
+    background-color: #fdffff8e;
+    border: 5px solid #b3de81;
+
+}
+.trans-img {
+    width: 90%;
+    height: 80%;
+    padding: 5px;
+}
+
+
   @media screen and (min-width: 400px) and (max-width: 774px){
     body{
         height: 100%;
@@ -228,7 +261,7 @@ body {
         flex-direction: column;
     }
 
-    #left-containers, .right-panel{
+    #left-containers, #expense-display{
         width: 100%;
     }
     #expense-table thead{
@@ -253,5 +286,16 @@ body {
 
     #balance-display h1, #expense-display h1, #expense-form label{
         font-size: 1.5rem;
+    }
+    #transaction-container{
+        height: 150px;
+        width: 100%;
+
+    }
+    .trans-btn{
+        height: 150px;
+        width: 30%;
+        margin: 7px;
+
     }
   } 

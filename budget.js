@@ -4,7 +4,7 @@ logoutBtn.addEventListener("click", logoutUser);
 function logoutUser() {
     localStorage.removeItem("loggedInUser");
     window.location.href = "index.html";
-    alert("Logout Successfully!");
+    alert("Logged out successfully.");
 }
 
 let userDisplay = document.getElementById("greet-container");
@@ -17,7 +17,7 @@ if (!loggedClient.expenses) {
   loggedClient.expenses = [];
 }
 
-if (loggedInUser) {
+if (loggedClient) {
   let greet = document.createElement("h1");
   greet.innerHTML = `WELCOME, <span id="usernameSpan">${loggedInUser}</span>!`;
   userDisplay.appendChild(greet);
