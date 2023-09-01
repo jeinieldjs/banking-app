@@ -6,11 +6,11 @@
 }
 
 body {
-    background-image: url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
+    background-image: linear-gradient(to bottom, rgba(252, 252, 252, 0.925), rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0)),url("https://img.freepik.com/premium-photo/big-green-piggy-bank-with-small-white-piggy-banks-table_157125-10707.jpg?w=1060");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     margin: auto;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 #content-wrapper {
-    background-color: #fcfcfcae;
+    
     padding: 20px;
     margin-top: 20px;
     margin: auto;
@@ -218,3 +218,40 @@ body {
 #expense-table thead, #expense-body tr:nth-child(even) {
     background-color: #f2f2f2a9;
   }
+
+  @media screen and (min-width: 400px) and (max-width: 774px){
+    body{
+        height: 100%;
+    }
+    #main-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-containers, .right-panel{
+        width: 100%;
+    }
+    #expense-table thead{
+        font-size: 1rem;
+    }
+    #logout-btn {
+        margin-top: 5px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 0.8rem;
+    }
+    #greet-container{
+        text-align: center;
+    }
+    #balance-amount{
+        font-size: 2.5rem;
+    }
+    #balance-display, #add-display{
+        height: auto;
+    }
+
+    #balance-display h1, #expense-display h1, #expense-form label{
+        font-size: 1.5rem;
+    }
+  } 
