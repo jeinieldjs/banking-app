@@ -10,6 +10,10 @@ transactions.forEach((transaction) => {
   typeElement.textContent = transaction.type;
   transactionElement.appendChild(typeElement);
 
+  const dateElement = document.createElement("p");
+  dateElement.textContent = `Date: ${transaction.date}`;
+  transactionElement.appendChild(dateElement);
+
   if (transaction.user) {
     const userElement = document.createElement("p");
     userElement.textContent = `User: ${transaction.user}`;
@@ -27,10 +31,6 @@ transactions.forEach((transaction) => {
     receiverElement.textContent = `Receiver: ${transaction.receiver}`;
     transactionElement.appendChild(receiverElement);
   }
-
-  const dateElement = document.createElement("p");
-  dateElement.textContent = `Date: ${transaction.date}`;
-  transactionElement.appendChild(dateElement);
 
   const amountElement = document.createElement("p");
   amountElement.textContent = `Amount: ${transaction.amount} PHP`;
