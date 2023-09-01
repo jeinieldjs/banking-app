@@ -113,7 +113,15 @@
           </table>
         </div>
       </div>
-      <div class="user-transactions"><h1>Transactions</h1></div>
+      <div class="user-transactions">
+        <h1>Transactions</h1>
+        <div id="user-transactions"></div>
+        <select id="sortSelector">
+          <option value="date">Sort by Date</option>
+          <option value="amount">Sort by Amount</option>
+          <option value="type">Sort by Type</option>
+        </select>
+      </div>
     </div>
 
     <script src="budget.js"></script>
