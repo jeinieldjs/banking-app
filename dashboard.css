@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   min-width: 1068px;
 }

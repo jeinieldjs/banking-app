@@ -4,7 +4,7 @@ logoutBtn.addEventListener("click", logoutUser);
 function logoutUser() {
     localStorage.removeItem("loggedInUser");
     window.location.href = "index.html";
-    alert("Logout Successfully!");
+    alert("Logged out successfully.");
 }
 
 let userDisplay = document.getElementById("greet-container");
@@ -17,7 +17,7 @@ if (!loggedClient.expenses) {
   loggedClient.expenses = [];
 }
 
-if (loggedInUser) {
+if (loggedClient) {
   let greet = document.createElement("h1");
   greet.innerHTML = `WELCOME, <span id="usernameSpan">${loggedInUser}</span>!`;
   userDisplay.appendChild(greet);
@@ -48,6 +48,15 @@ if (loggedInUser) {
   function addExpense() {
     let item = document.getElementById('item-input').value.toUpperCase();
     let cost = parseFloat(document.getElementById('price-input').value);
+
+    if (item === ''){
+      alert('Please enter a name or a short description for the expense.');
+      return; 
+    } else if (isNaN(cost)|| cost < 0){
+      alert('Cost of item is invalid.');
+      return;
+    }
+
     let timestamp = new Date().toLocaleString();
 
     let newExpense = {
