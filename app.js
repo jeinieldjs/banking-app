@@ -27,7 +27,7 @@ let initialClients = [
   new Client(
     "Felipe, Edward Daez",
     "edfelipe@yahoo.com",
-    "	ID1692264905895",
+    "ID1692264905895",
     85000
   ),
   new Client("Lim, Dexter Go", "dexlim@yahoo.com", "ID1686585600062", 39000),
