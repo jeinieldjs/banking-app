@@ -97,7 +97,6 @@ function transfer() {
   };
 
   const updatedTransactions = [...transactions, newTransaction];
-
   localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
 
   alert("Balance was transferred successfully");

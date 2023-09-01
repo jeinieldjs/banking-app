@@ -39,6 +39,8 @@ let deposit = () => {
   client.balance = parseFloat(client.balance) + depositAmount;
   localStorage.setItem("clients", JSON.stringify(clients));
 
+  // added new deposit log on transactions storage
+
   const newTransaction = {
     type: "Deposit",
     user: client.name,
