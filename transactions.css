@@ -1,0 +1,18 @@
+#transactions {
+  margin-left: 200px;
+  padding: 40px 16px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+
+  text-align: center;
+}
+
+#transactions h1,
+#transactions div {
+  margin-bottom: 1rem;
+}

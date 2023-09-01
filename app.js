@@ -51,10 +51,37 @@ let initialClients = [
   ),
 ];
 
+const initialTransactions = [
+  {
+    type: "Transfer",
+    sender: "Ayala, Marissa Yap",
+    receiver: "Cruz, Bruno Solano",
+    date: new Date().toLocaleString(),
+    amount: 500,
+  },
+  {
+    type: "Withdraw",
+    user: "Ayala, Marissa Yap",
+    date: new Date().toLocaleString(),
+    amount: 500,
+  },
+  {
+    type: "Deposit",
+    sender: "Ayala, Marissa Yap",
+    date: new Date().toLocaleString(),
+    amount: 1000,
+  },
+];
+
+let transactions = localStorage.getItem("transactions")
+  ? JSON.parse(localStorage.getItem("transactions"))
+  : initialTransactions;
+
 let clients = localStorage.getItem("clients")
   ? JSON.parse(localStorage.getItem("clients"))
   : initialClients;
 
+localStorage.setItem("transactions", JSON.stringify(transactions));
 localStorage.setItem("clients", JSON.stringify(clients));
 
 let logDetails = document.createElement("div");

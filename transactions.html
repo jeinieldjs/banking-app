@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Group 10 Banking App</title>
+    <link href="dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="transactions.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/b4db9c598c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section id="home">
+      <div id="sideNav" class="sidenav">
+        <div id="logoText">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/584/584093.png"
+            alt="logo"
+          />
+          <h1 id="bank name">PigPocket</h1>
+        </div>
+        <a href="dashboard.html" id="home">Home</a>
+        <a href="clients.html" id="clients">Clients</a>
+        <a href="deposit.html" id="deposit">Deposit</a>
+        <a href="withdraw.html" id="withdraw">Withdraw</a>
+        <a href="transfer.html" id="transfer">Transfer</a>
+        <a href="#" id="log-out">Log out</a>
+      </div>
+      <div id="transactions">
+        <h1>Transactions</h1>
+        <!-- <div class="transaction"> -->
+          <!-- <h6>Withdraw</h6>
+          <p id="date">Date</p>
+          <div class="sender">Test Sender</div>
+          <div class="receiver">Test Receiver</div>
+          <div class="amount">0.00 PHP</div> -->
+        </div>
+      </div>
+    </section>
+    <script src="transactions.js" type="module"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>
